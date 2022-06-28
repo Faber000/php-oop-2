@@ -1,28 +1,26 @@
 <?php
 
-require_once __DIR__ . '/Credit_Card.php'; 
+require_once __DIR__ . '/CreditCard.php'; 
 
 class User {
-    public $name;
-    public $surname;
-    public $email;
-    public $discount = 0;
-    public $credit_card;
+    public string $name;
+    public string $surname;
+    public string $email;
+    public int $discount;
+    public CreditCard $credit_card;
 
-    
-    /**
-     * __construct
-     *
-     * @param  string $_name
-     * @param  string $_surname
-     * @param  string $_email
-     * @return void
-     */
 
     public function __construct(string $_name, string $_surname, string $_email)
     {
         $this->name = $_name;
         $this->surname = $_surname;
         $this->email = $_email;
+        $this->discount = 0;
     }
+
+    public function setCreditCard(CreditCard $credit_card): void
+    {
+        $this->credit_card = $credit_card;
+    }
+
 }

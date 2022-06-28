@@ -1,22 +1,13 @@
 <?php
 
 class Product {
-    public $name;
-    public $price;
-    public $quantity;
-    public $animal_type;
+    public string $name;
+    public float $price;
+    public int $quantity;
+    public string $animal_type;
     
-    /**
-     * __construct
-     *
-     * @param  string $_name
-     * @param  float $_price
-     * @param  int $_quantity
-     * @param  string $_animal_type
-     * @return void
-     */
 
-    public function __construct(string $_name, float $_price, int $_quantity, int $_animal_type)
+    public function __construct(string $_name, float $_price, int $_quantity, string $_animal_type)
     {
         $this->name = $_name;
         $this->price = $_price;
